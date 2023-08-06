@@ -1,4 +1,5 @@
 .venv/
 .vscode/
+.private/
 
 pipfile.lock
