@@ -5,6 +5,7 @@ from chromadb.api.types import Documents, EmbeddingFunction, Embeddings
 class MyEmbeddingFunction(EmbeddingFunction):
     def __call__(self, texts: Documents) -> Embeddings:
         # For simplicity, let's just use the length of each text as the embedding
+        # NOT AN ACTUAL CUSTOM EMBEDDING
         return [[len(text)] for text in texts]
 
 # Initialize ChromaDB client
