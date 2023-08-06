@@ -1,0 +1,45 @@
+# Welcome to ChromaDB Repository! 
+
+This repository provides a friendly and beginner's guide to ChromaDB's python client, a Python library that helps you manage collections of embeddings. Each directory in this repository corresponds to a specific topic, complete with its own README and Python scripts for a hands-on understanding.
+
+## Table of Contents
+
+1. [Introduction](./1.%20Introduction/README.md)
+   - [intro.py](./1.%20Introduction/intro.py)
+2. [Collections](./2.%20Collections/README.md)
+   - [matrix_collections.py](./2.%20Collections/matrix_collections.py)
+3. [Adding Data](./3.%20Adding%20Data/README.md)
+   - [Adding Raw Documents](./3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/README.md)
+     - [adding_raw_docs.py](./3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/adding_raw_docs.py)
+   - [Adding Document-Associated Embeddings](./3.%20Adding%20Data/2.%20Adding%20Document-Associated%20Embeddings/README.md)
+     - [add_doc_emb.py](./3.%20Adding%20Data/2.%20Adding%20Document-Associated%20Embeddings/add_doc_emb.py)
+   - [Adding Embeddings and Metadata](./3.%20Adding%20Data/3.%20Adding%20Embeddings%20and%20Metadata/README.md)
+     - [add_emb_meta.py](./3.%20Adding%20Data/3.%20Adding%20Embeddings%20and%20Metadata/add_emb_meta.py)
+4. [Querying a Collection](./4.%20Querying%20a%20Collection/README.md)
+   - [Querying Embeddings](./4.%20Querying%20a%20Collection/1.%20Querying%20Embeddings/README.md)
+     - [query_emb.py](./4.%20Querying%20a%20Collection/1.%20Querying%20Embeddings/query_emb.py)
+   - [Querying Texts](./4.%20Querying%20a%20Collection/2.%20Querying%20Texts/README.md)
+     - [query_texts.py](./4.%20Querying%20a%20Collection/2.%20Querying%20Texts/query_texts.py)
+   - [Retrieving Items by Id](./4.%20Querying%20a%20Collection/3.%20Retrieving%20Items%20by%20Id/README.md)
+     - [retrieve_by_id.py](./4.%20Querying%20a%20Collection/3.%20Retrieving%20Items%20by%20Id/retrieve_by_id.py)
+   - [Choosing Returned Data](./4.%20Querying%20a%20Collection/4.%20Choosing%20Returned%20Data/README.md)
+     - [choose_data.py](./4.%20Querying%20a%20Collection/4.%20Choosing%20Returned%20Data/choose_data.py)
+   - [Using 'where' Filters](./4.%20Querying%20a%20Collection/5.%20Using%20'where'%20Filters/README.md)
+     - [using_where_filters.py](./4.%20Querying%20a%20Collection/5.%20Using%20'where'%20Filters/using_where_filters.py)
+5. [Updating Data in a Collection](./5.%20Updating%20Data%20in%20a%20Collection/README.md)
+   - [Updating Property](./5.%20Updating%20Data%20in%20a%20Collection/1.%20Updating%20Property/README.md)
+     - [update_items.py](./5.%20Updating%20Data%20in%20a%20Collection/1.%20Updating%20Property/update_items.py)
+   - [Upsert Operation](./5.%20Updating%20Data%20in%20a%20Collection/2.%20Upsert%20Operation/README.md)
+     - [upsert_operation.py](./5.%20Updating%20Data%20in%20a%20Collection/2.%20Upsert%20Operation/upsert_operation.py)
+6. [Deleting Data in a Collection](./6.%20Deleting%20Data%20in%20a%20Collection/README.md)
+   - [Delete by ID](./6.%20Deleting%20Data%20in%20a%20Collection/1.%20Delete%20by%20ID/README.md)
+     - [delete_by_id.py](./6.%20Deleting%20Data%20in%20a%20Collection/1.%20Delete%20by%20ID/delete_by_id.py)
+   - [Delete with 'where' Filter](./6.%20Deleting%20Data%20in%20a%20Collection/2.%20Delete%20with%20'where'%20Filter/README.md)
+     - [delete_items_where.py](./6.%20Deleting%20Data%20in%20a%20Collection/2.%20Delete%20with%20'where'%20Filter/delete_items_where.py)
+7. [Using Embedding Functions](./7.%20Using%20Embedding%20Functions/README.md)
+   - [OpenAI](./7.%20Using%20Embedding%20Functions/1.%20OpenAI/README.md)
+     - [openai_emb_func.py](./7.%20Using%20Embedding%20Functions/1.%20OpenAI/openai_emb_func.py)
+   - [Custom Embedding Functions](./7.%20Using%20Embedding%20Functions/2.%20Custom%20Embedding%20Functions/README.md)
+     - [custom_emb_func.py](./7.%20Using%20Embedding%20Functions/2.%20Custom%20Embedding%20Functions/custom_emb_func.py)
+
+I hope you find this repository helpful in your journey with ChromaDB. Happy coding!
