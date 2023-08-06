@@ -1,4 +1,4 @@
-# Welcome to ChromaDB Repository! 
+# Welcome to the easypeasy ChromaDB Tutorial! 
 
 This repository provides a friendly and beginner's guide to ChromaDB's python client, a Python library that helps you manage collections of embeddings. Each directory in this repository corresponds to a specific topic, complete with its own README and Python scripts for a hands-on understanding.
 
