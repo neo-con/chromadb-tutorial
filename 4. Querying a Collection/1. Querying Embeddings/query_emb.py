@@ -15,7 +15,7 @@ neo_collection.add(
 
 # Querying by a set of query_embeddings
 results = neo_collection.query(
-    query_embeddings=[[0.6, 0.1, 0.9]],
+    query_embeddings=[[0.1, 0.2, 0.3]],
     n_results=1
 )
 

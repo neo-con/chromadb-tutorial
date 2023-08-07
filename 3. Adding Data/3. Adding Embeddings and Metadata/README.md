@@ -14,13 +14,13 @@ This tutorial will guide you through adding embeddings and metadata to a collect
 
     💡 Adding just metadata and no documents can be useful in several scenarios:
 
-    > **External Document Storage**: The actual documents might be stored in an external system due to their size or for security reasons. In this case, the metadata can include a reference or a link to the actual document in the external system.
+    >- **External Document Storage**: The actual documents might be stored in an external system due to their size or for security reasons. In this case, the metadata can include a reference or a link to the actual document in the external system.
     >
-    > **Privacy Concerns**: In some cases, due to privacy concerns or regulations, the actual documents cannot be stored. However, the metadata, which does not contain sensitive information, can be stored and used for analysis.
+    >- **Privacy Concerns**: In some cases, due to privacy concerns or regulations, the actual documents cannot be stored. However, the metadata, which does not contain sensitive information, can be stored and used for analysis.
     >
-    > **Efficiency**: Storing and retrieving metadata can be more efficient than dealing with large documents, especially when the documents are not needed for the analysis or operations being performed.
+    >- **Efficiency**: Storing and retrieving metadata can be more efficient than dealing with large documents, especially when the documents are not needed for the analysis or operations being performed.
     >
-    > **Pre-processed Data**: In some cases, the documents might have been pre-processed into a more useful form (like embeddings) and the original documents are no longer needed. The metadata can provide additional context for the pre-processed data.
+    >- **Pre-processed Data**: In some cases, the documents might have been pre-processed into a more useful form (like embeddings) and the original documents are no longer needed. The metadata can provide additional context for the pre-processed data.
     >
 
 3. **Counting Items in a Collection**

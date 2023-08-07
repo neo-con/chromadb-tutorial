@@ -25,6 +25,7 @@ matrix_collection.add(
     ],
     ids=["quote_1", "quote_2", "quote_3"],
 )
+
 # Querying by a set of query_texts
 results = matrix_collection.query(query_texts=["What is the Matrix?"], n_results=2)
 
