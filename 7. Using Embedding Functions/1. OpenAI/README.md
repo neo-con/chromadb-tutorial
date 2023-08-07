@@ -23,7 +23,7 @@ Once you have `openai` installed, follow the steps below to use the OpenAI embed
 
 3. **Querying by a Set of Query Texts**
 
-    https://github.com/neo-con/chromadb-tutorial/blob/19fe2c99dc1aa9fe0e1aac930fbef84536759dec/7.%20Using%20Embedding%20Functions/1.%20OpenAI/openai_emb_func.py#L29-L32
+    https://github.com/neo-con/chromadb-tutorial/blob/12ffea8f20af03de10dbec0f7bcd02b888f6b402/7.%20Using%20Embedding%20Functions/1.%20OpenAI/openai_emb_func.py#L29-L32
     We can query the collection by a set of query texts using the `query` method. Chroma will first embed each query text with the collection's embedding function (in this case, the OpenAI embedding function), and then perform the query with the generated embedding. In this example, we query the collection with the text "What is the Matrix?" and ask for two results.
 
 Please refer to the `openai_emb_func.py` file for the complete Python code used in this tutorial.
