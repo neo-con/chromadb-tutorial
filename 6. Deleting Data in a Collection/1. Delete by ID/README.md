@@ -26,6 +26,7 @@ This tutorial will guide you through deleting items from a collection by their I
 
     Feel free to modify the IDs in the `delete` method to delete different items from the collection.
 
+    https://github.com/neo-con/chromadb-tutorial/blob/19fe2c99dc1aa9fe0e1aac930fbef84536759dec/6.%20Deleting%20Data%20in%20a%20Collection/1.%20Delete%20by%20ID/delete_by_id.py#L22-L25
     After deleting the item, we retrieve the remaining items from the collection using the `get` method to verify the deletion.
 
 Please refer to the `delete_by_id.py` file for the complete Python code used in this tutorial.
