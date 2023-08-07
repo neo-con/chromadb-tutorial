@@ -4,7 +4,7 @@ This tutorial will guide you through creating, inspecting, and deleting collecti
 
 1. **Creating a Collection**
 
-   https://github.com/neo-con/chromadb-tutorial/blob/9bf1d87c2a68375a4913774b9465777b4dae9eca/2.%20Collections/matrix_collections.py#L9-L10
+    https://github.com/neo-con/chromadb-tutorial/blob/9bf1d87c2a68375a4913774b9465777b4dae9eca/2.%20Collections/matrix_collections.py#L9-L10
     We start by initializing the ChromaDB client and creating a collection named `neo`.
 
 4. **Inspecting a Collection**
@@ -40,6 +40,6 @@ This tutorial will guide you through creating, inspecting, and deleting collecti
 9. **Deleting a Collection**
 
     https://github.com/neo-con/chromadb-tutorial/blob/9bf1d87c2a68375a4913774b9465777b4dae9eca/2.%20Collections/matrix_collections.py#L26-L31
-   We attempt to delete the `mr_anderson` collection using the `delete_collection` method. Please note that `delete_collection` raises a `ValueError` if the collection does not exist. In our Python code, we handle this potential error using a `try/except` block. If the collection is successfully deleted, we print a success message. If the collection does not exist, we print the error message.
+    We attempt to delete the `mr_anderson` collection using the `delete_collection` method. Please note that `delete_collection` raises a `ValueError` if the collection does not exist. In our Python code, we handle this potential error using a `try/except` block. If the collection is successfully deleted, we print a success message. If the collection does not exist, we print the error message.
 
 Please refer to the `matrix_collections.py` file for the complete Python code used in this tutorial.
