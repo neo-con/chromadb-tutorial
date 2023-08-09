@@ -4,7 +4,7 @@ This tutorial will guide you through creating, inspecting, and deleting collecti
 
 1. **Creating a Collection**
 
-    https://github.com/neo-con/chromadb-tutorial/blob/9bf1d87c2a68375a4913774b9465777b4dae9eca/2.%20Collections/matrix_collections.py#L9-L10
+    https://github.com/neo-con/chromadb-tutorial/blob/9bf1d87c2a68375a4913774b9465777b4dae9eca/2.%20Collections/matrix_collections.py#L3-L7
     We start by initializing the ChromaDB client and creating a collection named `neo`.
 
 4. **Inspecting a Collection**
