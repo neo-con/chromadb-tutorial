@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 chromadb = "*"
-openai = "*"
+openai = "==1.35.13"
 
 [dev-packages]
 

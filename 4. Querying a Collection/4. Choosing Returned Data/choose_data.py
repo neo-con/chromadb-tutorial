@@ -4,7 +4,7 @@ import chromadb
 client = chromadb.Client()
 
 # Create the collection
-morpheus_collection = client.create_collection(name="morpheus")
+morpheus_collection = client.create_collection(name="morpheus",  metadata={"hnsw:space": "cosine"})
 
 # Add the raw documents
 morpheus_collection.add(
@@ -18,7 +18,7 @@ morpheus_collection.add(
 
 # Query the collection by text and choose which data is returned
 results = morpheus_collection.query(
-    query_texts=["take the red pill"], n_results=1, include=["distances", "embeddings"]
+    query_texts=["make a choice"], n_results=1, include=["distances", "embeddings"]
 )
 
 print(results)

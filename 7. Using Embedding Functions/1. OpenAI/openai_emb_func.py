@@ -1,5 +1,5 @@
 import chromadb
-from chromadb.utils import embedding_functions
+import chromadb.utils.embedding_functions as embedding_functions
 
 # Initialize ChromaDB client
 client = chromadb.Client()
@@ -7,7 +7,7 @@ client = chromadb.Client()
 # Initialize OpenAI embedding function
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
     api_key="USE YOUR OPEN-AI KEY",
-    model_name="text-embedding-ada-002",
+    model_name="text-embedding-3-small",
 )
 
 # Create the collection with the OpenAI embedding function

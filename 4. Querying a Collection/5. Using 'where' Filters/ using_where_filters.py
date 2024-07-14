@@ -4,7 +4,7 @@ import chromadb
 client = chromadb.Client()
 
 # Create the collection
-matrix_collection = client.create_collection(name="matrix")
+matrix_collection = client.create_collection(name="matrix", metadata={"hnsw:space": "cosine"})
 
 # Add the raw documents
 matrix_collection.add(

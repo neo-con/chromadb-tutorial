@@ -1,24 +1,49 @@
 # Querying by a Set of Query Texts in ChromaDB
 
-This tutorial will guide you through querying a collection in ChromaDB using a set of query texts as input.
+This tutorial will guide you through querying a collection in ChromaDB using a set of query texts as input, demonstrating semantic search capabilities.
 
-1. **Creating a Collection**
+## 1. Creating a Collection
 
-    https://github.com/neo-con/chromadb-tutorial/blob/19fe2c99dc1aa9fe0e1aac930fbef84536759dec/4.%20Querying%20a%20Collection/2.%20Querying%20Texts/query_texts.py#L3-L9
-    We start by initializing the ChromaDB client and creating a collection named `morpheus`. We also set the distance function to `"cosine"` for this collection.
+```python
+client = chromadb.Client()
 
-2. **Adding Raw Documents**
+morpheus_collection = client.create_collection(
+    name="morpheus", metadata={"hnsw:space": "cosine"}
+)
+```
 
-    https://github.com/neo-con/chromadb-tutorial/blob/19fe2c99dc1aa9fe0e1aac930fbef84536759dec/4.%20Querying%20a%20Collection/2.%20Querying%20Texts/query_texts.py#L11-L19
-    We add three raw documents (famous quotes from "The Matrix") to our collection using the `add` method. Each document is associated with a unique id.
+We start by initializing the ChromaDB client and creating a collection named `morpheus`. We set the distance function to `"cosine"` for this collection, which is suitable for semantic similarity searches.
 
-3. **Querying by a Set of Query Texts**
+## 2. Adding Raw Documents
 
-    https://github.com/neo-con/chromadb-tutorial/blob/19fe2c99dc1aa9fe0e1aac930fbef84536759dec/4.%20Querying%20a%20Collection/2.%20Querying%20Texts/query_texts.py#L21-L27
-    We can query the collection by a set of query texts using the `query` method. This will return the closest matches to each query text. In this example, we query the collection with the text "Take the red pill". We specify that we want to retrieve 2 results (`n_results=2`).
+```python
+morpheus_collection.add(
+    documents=[
+        "This is your last chance. After this, there is no turning back.",
+        "You take the blue pill, the story ends, you wake up in your bed and believe whatever you want to believe.",
+        "You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.",
+    ],
+    ids=["quote_1", "quote_2", "quote_3"],
+)
+```
 
-    The results will include the ids, metadatas (if provided), and documents of the closest matches. The order of the results is based on their similarity to the query text, with the most similar results appearing first.
+We add three raw documents (famous quotes from "The Matrix") to our collection using the `add` method. Each document is associated with a unique id.
 
-    Feel free to modify the query text and the number of results to see different outcomes. 
+## 3. Querying by a Set of Query Texts
+
+```python
+results = morpheus_collection.query(
+    query_texts=["Make a choice"],
+    n_results=2,
+)
+
+print(results)
+```
+
+We can query the collection using semantic search with the `query` method. This will return the closest matches based on meaning, not just exact text matching. In this example, we query the collection with the text "Tell me about making a choice". We specify that we want to retrieve 2 results (`n_results=2`).
+
+The results will include the ids, metadatas (if provided), and documents of the semantically closest matches. The order of the results is based on their semantic similarity to the query text, with the most relevant results appearing first.
+
+> **Note:** This example demonstrates semantic search. The query "Make a choice" doesn't appear verbatim in any of the documents, but ChromaDB will return the most semantically relevant results.
 
 Please refer to the `query_by_texts.py` file for the complete Python code used in this tutorial.
