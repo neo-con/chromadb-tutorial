@@ -2,29 +2,54 @@
 
 This tutorial will guide you through adding raw documents to a collection in ChromaDB.
 
-1. **Creating a Collection**
+## 1. Creating a Collection
 
-    https://github.com/neo-con/chromadb-tutorial/blob/630e85d7be622f180784c25b9ae2e275844f9e4d/3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/adding_raw_docs.py#L3-L7
-    We start by initializing the ChromaDB client and creating a collection named `neo`.
+```python
+client = chromadb.Client()
+neo_collection = client.create_collection(name="neo")
+```
 
-2. **Adding Raw Documents**
+We start by initializing the ChromaDB client and creating a collection named `neo`.
 
-    https://github.com/neo-con/chromadb-tutorial/blob/630e85d7be622f180784c25b9ae2e275844f9e4d/3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/adding_raw_docs.py#L9-L12
-    We add two famous quotes from "The Matrix" to our collection using the `add` method. Each document is associated with a unique id. Importantly, when embeddings are not passed to the `add` method, ChromaDB automatically embeds these documents for us. By default, ChromaDB uses sentence transformer for embedding if no specific embedding function is supplied during the collection creation.
+## 2. Adding Raw Documents
 
-3. **Counting Items in a Collection**
+```python
+neo_collection.add(
+    documents=["I know kung fu.", "There is no spoon."], ids=["quote_1", "quote_2"]
+)
+```
 
-    https://github.com/neo-con/chromadb-tutorial/blob/630e85d7be622f180784c25b9ae2e275844f9e4d/3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/adding_raw_docs.py#L14-L16
-    We can count the number of items in a collection using the `count` method. Since we have added two documents to our collection, the count returns `2`.
+We add two famous quotes from "The Matrix" to our collection using the `add` method. Each document is associated with a unique id. Importantly:
 
-4. **Retrieving Items from a Collection**
+- When embeddings are not passed to the `add` method, ChromaDB automatically embeds these documents for us.
+- By default, ChromaDB uses sentence transformer for embedding if no specific embedding function is supplied during the collection creation.
 
-    https://github.com/neo-con/chromadb-tutorial/blob/630e85d7be622f180784c25b9ae2e275844f9e4d/3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/adding_raw_docs.py#L18-L20
-    We can retrieve all items from a collection using the `get` method. By default, this will return a dictionary with the ids, metadatas (if included), and documents of the items in the collection.
+## 3. Counting Items in a Collection
 
-4. **Take a peek at a Collection**
+```python
+item_count = neo_collection.count()
+print(f"Count of items in collection: {item_count}")
+```
 
-    https://github.com/neo-con/chromadb-tutorial/blob/630e85d7be622f180784c25b9ae2e275844f9e4d/3.%20Adding%20Data/1.%20Adding%20Raw%20Documents/adding_raw_docs.py#L22-L23
-    We can also use the `peek` method to return the first 10 items from a collection. By default, this will return a dictionary with the ids, metadatas (if provided) and documents of the items in the collection. The main difference in `peek` and `get` methods is that the `get` method allows for more arguments, whereas the `peek` method only takes `limit`, which is simply the the number of results to return.
+We can count the number of items in a collection using the `count` method. Since we have added two documents to our collection, the count returns `2`.
+
+## 4. Retrieving Items from a Collection
+
+```python
+items = neo_collection.get()
+print(items)
+```
+
+We can retrieve all items from a collection using the `get` method. By default, this will return a dictionary with the ids, metadatas (if included), and documents of the items in the collection.
+
+## 5. Taking a Peek at a Collection
+
+```python
+neo_collection.peek(limit=5)
+```
+
+We can also use the `peek` method to return the first 10 items from a collection. By default, this will return a dictionary with the ids, metadatas (if provided) and documents of the items in the collection.
+
+> **Note:** The main difference between `peek` and `get` methods is that the `get` method allows for more arguments, whereas the `peek` method only takes `limit`, which is simply the number of results to return.
 
 Please refer to the `adding_raw_docs.py` file for the complete Python code used in this tutorial.

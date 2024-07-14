@@ -20,7 +20,7 @@ morpheus_collection.add(
 
 # Querying by a set of query_texts
 results = morpheus_collection.query(
-    query_texts=["Take the red pill"],
+    query_texts=["Make a choice"],
     n_results=2,
 )
 
